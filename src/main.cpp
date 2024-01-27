@@ -40,11 +40,11 @@ void setup()
   pinMode(0, OUTPUT);
   pinMode(1, OUTPUT);
 
-  dhtSensor.setupDHT();
-  hmdSensor.setupHMD();
-  fanMotor.setupMotor();
-  pumpMotor.setupMotor();
-  servoMotor.setupMotor();
+  dhtSensor1.setupDHT();
+  hmdSensor1.setupHMD();
+  fanMotor1.setupMotor();
+  pumpMotor1.setupMotor();
+  servoMotor1.setupMotor();
 }
 
 void loop()
@@ -73,9 +73,9 @@ void loop()
     Firebase.getString(fbdo, F("Data/Temperature"), retrievedDhtDataString);
     Firebase.getString(fbdo, F("Data/Humidity"), retrievedHmdDataString);
 
-    Firebase.setBool(fbdo, F("States/Pump_State"), pumpMotor.getState());
-    Firebase.setBool(fbdo, F("States/Fan_State"), fanMotor.getState());
-    Firebase.setBool(fbdo, F("States/Servo_State"), servoMotor.getState());
+    Firebase.setBool(fbdo, F("States/Pump_State"), pumpMotor1.getState());
+    Firebase.setBool(fbdo, F("States/Fan_State"), fanMotor1.getState());
+    Firebase.setBool(fbdo, F("States/Servo_State"), servoMotor1.getState());
 
     // float retrievedDhtData = atof(retrievedDhtDataString);
     // float retrievedHmdData = atof(retrievedHmdDataString);

@@ -10,15 +10,15 @@ void run()
 
 float readCheckDhtData()
 {
-    float currentTemp = dhtSensor.read();
+    float currentTemp = dhtSensor1.read();
     while (1) // Run the loop unti the data are valid.
     {
-        if (dhtSensor.checkData(currentTemp)) // If the data are valid then exit the loop
+        if (dhtSensor1.checkData(currentTemp)) // If the data are valid then exit the loop
             break;
         else
         {
             delay(1000);
-            currentTemp = dhtSensor.read(); // Read data again
+            currentTemp = dhtSensor1.read(); // Read data again
         }
     }
     // Serial.println(currentTemp);
@@ -27,15 +27,15 @@ float readCheckDhtData()
 
 float readCheckHmdData()
 {
-    float currentMoist = hmdSensor.read();
+    float currentMoist = hmdSensor1.read();
     while (1)
     {
-        if (hmdSensor.checkData(currentMoist))
+        if (hmdSensor1.checkData(currentMoist))
             break;
         else
         {
             delay(1000);
-            currentMoist = hmdSensor.read();
+            currentMoist = hmdSensor1.read();
         }
     }
     // Serial.println(currentMoist);
@@ -44,33 +44,33 @@ float readCheckHmdData()
 
 void controlFanWindow(float &currentTemp)
 {
-    if (dhtSensor.isCloseToThreshold(currentTemp))
+    if (dhtSensor1.isCloseToThreshold(currentTemp))
     {
         // Serial.println("Temperature above threshold. FAN: OPEN WINDOW: OPEN");
-        fanMotor.open();
-        if (!servoMotor.getState())
-            servoMotor.open();
+        fanMotor1.open();
+        if (!servoMotor1.getState())
+            servoMotor1.open();
     }
     else
     {
         // Serial.println("Temperature below threshold. FAN: CLOSE WINDOW: CLOSE");
-        fanMotor.close();
-        if (servoMotor.getState())
-            servoMotor.close();
+        fanMotor1.close();
+        if (servoMotor1.getState())
+            servoMotor1.close();
     }
 }
 
 void controlPump(float &currentMoist)
 {
-    if (hmdSensor.isCloseToThreshold(currentMoist))
+    if (hmdSensor1.isCloseToThreshold(currentMoist))
     {
         // Serial.println("Humidity above threshold. PUMP: CLOSE");
-        pumpMotor.close();
+        pumpMotor1.close();
     }
     else
     {
         // Serial.println("Humidity below threshold. PUMP: OPEN");
-        pumpMotor.open();
+        pumpMotor1.open();
     }
 }
 
