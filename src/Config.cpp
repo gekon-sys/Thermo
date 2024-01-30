@@ -16,14 +16,14 @@ const char *DATABASE_URL = "FIREBASE_DATABASE_URL";
 // DHT Sensor parameters
 const uint8_t DHT_TYPE_CONFIG = DHT11;
 const uint8_t DHT_DATA_PIN_CONFIG{6};
-float DHT_THRESHOLD = 26;
+float DHT_THRESHOLD{26};
 float OFFSET{1};
 DHTSensor dhtSensor1(DHT_DATA_PIN_CONFIG, DHT_TYPE_CONFIG);
 
 //  HMD Sensor parameters
-float HMD_THRESHOLD = 60;
-const uint8_t HMD_DATA_PIN_CONFIG = 3;
-const uint8_t HMD_POWER_PIN_CONFIG = 7;
+float HMD_THRESHOLD{60};
+const uint8_t HMD_DATA_PIN_CONFIG{3};
+const uint8_t HMD_POWER_PIN_CONFIG{7};
 HMDSensor hmdSensor1(HMD_POWER_PIN_CONFIG, HMD_DATA_PIN_CONFIG);
 
 //  Fan parameters
