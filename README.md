@@ -51,7 +51,7 @@ DHTSensor dhtSensor1(DHT_DATA_PIN_CONFIG, DHT_TYPE_CONFIG);
 float readCheckDhtData()
 {
     float currentTemp = dhtSensor1.read();
-    while (1) // Run the loop unti the data are valid.
+    while (1) // Run the loop unti the data is valid.
     {
         if (dhtSensor1.checkData(currentTemp))
             break;
