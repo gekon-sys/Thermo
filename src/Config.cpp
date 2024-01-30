@@ -4,13 +4,13 @@ float currentTemp{0};
 float currentMoist{0};
 
 // Wifi credentials
-const char *SSID = "COSMOTE-458524";
-const char *PASSWORD = "ehm9mk3b5k4xk1ex";
+const char *SSID = "SSID";
+const char *PASSWORD = "PASSWORD";
 const int MAX_CONNECTION_ATTEMPTS{10};
 
 // Firebase
-const char *API_KEY = "AIzaSyDoklSU903Y_uCT_PPpvXtuKkqP-_eS2vg";
-const char *DATABASE_URL = "https://automated-greenhouse-6ca23-default-rtdb.firebaseio.com/";
+const char *API_KEY = "API_KEY_FROM_FIREBASE";
+const char *DATABASE_URL = "FIREBASE_DATABASE_URL";
 
 
 // DHT Sensor parameters
