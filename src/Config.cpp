@@ -4,8 +4,8 @@ float currentTemp{0};
 float currentMoist{0};
 
 // Wifi credentials
-const char *SSID = "COSMOTE-458524";
-const char *PASSWORD = "ehm9mk3b5k4xk1ex";
+const char *SSID = "SSID";
+const char *PASSWORD = "PASSWORD";
 const int MAX_CONNECTION_ATTEMPTS{10};
 
 // Firebase
