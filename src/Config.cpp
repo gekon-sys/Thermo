@@ -4,26 +4,26 @@ float currentTemp{0};
 float currentMoist{0};
 
 // Wifi credentials
-const char *SSID = "";
-const char *PASSWORD = "";
+const char *SSID = "COSMOTE-458524";
+const char *PASSWORD = "ehm9mk3b5k4xk1ex";
 const int MAX_CONNECTION_ATTEMPTS{10};
 
 // Firebase
-const char *API_KEY = "AIzaSyDoklSU903Y_uCT_PPpvXtuKkqP-_eS2vg";
-const char *DATABASE_URL = "https://automated-greenhouse-6ca23-default-rtdb.firebaseio.com/";
+const char *API_KEY = "API_KEY_FROM_FIREBASE";
+const char *DATABASE_URL = "FIREBASE_DATABASE_URL";
 
 
 // DHT Sensor parameters
 const uint8_t DHT_TYPE_CONFIG = DHT11;
 const uint8_t DHT_DATA_PIN_CONFIG{6};
-float DHT_THRESHOLD = 26;
+float DHT_THRESHOLD{26};
 float OFFSET{1};
 DHTSensor dhtSensor1(DHT_DATA_PIN_CONFIG, DHT_TYPE_CONFIG);
 
 //  HMD Sensor parameters
-float HMD_THRESHOLD = 60;
-const uint8_t HMD_DATA_PIN_CONFIG = 3;
-const uint8_t HMD_POWER_PIN_CONFIG = 7;
+float HMD_THRESHOLD{60};
+const uint8_t HMD_DATA_PIN_CONFIG{3};
+const uint8_t HMD_POWER_PIN_CONFIG{7};
 HMDSensor hmdSensor1(HMD_POWER_PIN_CONFIG, HMD_DATA_PIN_CONFIG);
 
 //  Fan parameters
