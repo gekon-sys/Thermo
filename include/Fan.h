@@ -7,7 +7,7 @@ class Fan : public Motor
         bool state;
     public:
         Fan(uint8_t pin, bool state);
-        ~Fan();
+        ~Fan() override;
         void open() override;
         void close() override;
         void setupMotor() override;

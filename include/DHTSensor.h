@@ -16,7 +16,7 @@ private:
 
 public:
     DHTSensor(uint8_t pin, uint8_t DHT_TYPE);
-    ~DHTSensor();
+    ~DHTSensor() override;
     float read() override;
     bool isCloseToThreshold(float &data) override;
     bool checkData(float &data) override;

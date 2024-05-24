@@ -9,7 +9,7 @@ private:
 
 public:
     Pump(uint8_t pin, const char* name,  bool state = false);
-    ~Pump();
+    ~Pump() override;
     void open() override;
     void close() override;
     void setupMotor() override;

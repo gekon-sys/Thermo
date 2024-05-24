@@ -8,7 +8,7 @@ class HMDSensor : public Sensor
         uint8_t powerPin;
     public:
         HMDSensor(uint8_t powerPin, uint8_t dataPin);
-        ~HMDSensor();
+        ~HMDSensor() override;
         float read() override;
         bool isCloseToThreshold(float &data) override;
         bool checkData(float &data) override;

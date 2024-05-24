@@ -15,7 +15,7 @@ private:
 
 public:
     MyServo(uint8_t pin, uint8_t hz, int minPulse, int maxPulse, bool state = false);
-    ~MyServo();
+    ~MyServo() override;
     void open() override;
     void close() override;
     void setupMotor() override;
