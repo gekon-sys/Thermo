@@ -37,14 +37,13 @@ To add new sensors or actuators to the system:
 extern const uint8_t DHT_TYPE_CONFIG;
 extern const uint8_t DHT_DATA_PIN_CONFIG;
 extern float DHT_THRESHOLD;
-extern float OFFSET;
 extern DHTSensor dhtSensor1;
 
 // DHT Sensor parameters Config.cpp
 const uint8_t DHT_TYPE_CONFIG = DHT11;
 const uint8_t DHT_DATA_PIN_CONFIG{6};
 float DHT_THRESHOLD = 26;
-float OFFSET{1};
+
 DHTSensor dhtSensor1(DHT_DATA_PIN_CONFIG, DHT_TYPE_CONFIG);
 
 // Add the methods inside function. 
