@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is an automated greenhouse system designed for efficient plant cultivation. The core of the system is based on the ESP32 microcontroller (specifically, ESP32-S3-DevKitC-02), capable of reading data from various sensors and controlling actuators. The project leverages a modular and scalable architecture, allowing users to easily extend and customize the system with additional sensors and actuators, without the need to re-write code for each new component. Currently, the project works only with DHT11 sensors.
+This project is an automated greenhouse system designed for efficient plant cultivation. The core of the system is based on the ESP32 microcontroller (specifically, ESP32-S3-DevKitC-1), capable of reading data from various sensors and controlling actuators. The project leverages a modular and scalable architecture, allowing users to easily extend and customize the system with additional sensors and actuators, without the need to re-write code for each new component. Currently, the project works only with DHT11 sensors.
 
 ## Features
 
