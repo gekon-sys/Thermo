@@ -1,4 +1,4 @@
-# Automated Greenhouse Project
+# Automated Greenhouse Project (Work In Progress)
 
 ## Overview
 
